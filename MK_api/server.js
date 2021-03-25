@@ -37,7 +37,7 @@ app.get('/', (request, response) => {
 })
 app.get('/api/characters/:characterName', (request, response) => {
     const name = request.params.characterName.toLowerCase()
-    console.log(name)
+    // console.log(name)
     if (characters[name]) {
         response.json(characters[name])
     } else {

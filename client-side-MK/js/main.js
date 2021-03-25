@@ -6,10 +6,9 @@ async function getCharacter() {
     try {
         const res = await fetch(`http://localhost:8000/api/characters/${name}`)
         const data = await res.json()
-        console.log(data)
-        document.querySelector('h2').innerText = data.fatality
+        document.querySelector('h2').innerText = `Name: ${name.toUpperCase()}`
+        document.querySelector('h3').innerText = `Moveset: ${data.moveset}`
     } catch (err) {
         console.log(err)
-
     }
 }
